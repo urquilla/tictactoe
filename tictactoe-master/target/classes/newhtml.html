@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        
+        <SCRIPT>
+              $(document).ready(function () {
+                $("#A0").click(function () {
+                    /* var ot_antigua = $("#ot_editar").val();
+                     var ot_nueva = $("#nueva_ot").val();
+                     var cuenta = $("#cuenta").val();
+                     alert(ot_antigua + "-" + ot_nueva + "-" + cuenta);*/
+                    if (jugador == 1 && $("#A0").text() == "0") {
+                        var dataString = 'token=' + 1 + '&x=' + 0 + '&y=' + 0 + '&id=' + id;
+                        $("#A0").text("1");
+                        jugador = 2;
+                    } else if (jugador == 2 && $("#A0").text() == "0") {
+                        var dataString = 'token=' + 2 + '&x=' + 0 + '&y=' + 0 + '&id=' + id;
+                        $("#A0").text("2");
+                        jugador = 1;
+                    } else {
+                        alert("Vuelva a intentar en otra casilla");
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "/game/?id=" + id,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            var names = response.winner;
+                            if (names == 1 || names == 2) {
+                                alert("names" + names);
+                            }
+                        },
+                        failure: function (response) {
+                            alert("error");
+                        }
+                    });
+                    var saveme = $.ajax({
+                        type: "POST",
+                        url: "/movement/",
+                        data: dataString,
+                        dataType: "html",
+                        asycn: false,
+                        success: function () {
+                            alert("Ha sido ejecutada la acción.");
+                        }
+                    }).responseText;
+                    console.log(saveme);
+                });
+            });
+
+            $(document).ready(function () {
+                $("#A1").click(function () {
+                    if (jugador == 1 && $("#A1").text() == "0") {
+                        var dataString = 'token=' + 1 + '&x=' + 0 + '&y=' + 1 + '&id=' + id;
+                        $("#A1").text("1");
+                        jugador = 2;
+
+                    } else if (jugador == 2 && $("#A1").text() == "0") {
+                        var dataString = 'token=' + 2 + '&x=' + 0 + '&y=' + 1 + '&id=' + id;
+                        $("#A1").text("2");
+                        jugador = 1;
+                    } else {
+                        alert("Vuelva a intentar en otra casilla");
+
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "/game/?id=" + id,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            var names = response.winner;
+                            if (names == 1 || names == 2) {
+                                alert("names" + names);
+                            }
+                        },
+                        failure: function (response) {
+                            alert("error");
+                        }
+                    });
+
+                    var saveme = $.ajax({
+                        type: "POST",
+                        url: "/movement/",
+                        data: dataString,
+                        dataType: "html",
+                        asycn: false,
+                        success: function () {
+                            alert("Ha sido ejecutada la acción.");
+
+                        }
+                    }).responseText;
+
+                    console.log(saveme);
+
+                });
+
+            });
+
+            $(document).ready(function () {
+                $("#A2").click(function () {
+                    /* var ot_antigua = $("#ot_editar").val();
+                     var ot_nueva = $("#nueva_ot").val();
+                     var cuenta = $("#cuenta").val();
+                     alert(ot_antigua + "-" + ot_nueva + "-" + cuenta);*/
+                    if (jugador == 1 && $("#A2").text() == "0") {
+                        var dataString = 'token=' + 1 + '&x=' + 0 + '&y=' + 2 + '&id=' + id;
+                        $("#A2").text("1");
+                        jugador = 2;
+                    } else if (jugador == 2 && $("#A2").text() == "0") {
+                        var dataString = 'token=' + 2 + '&x=' + 0 + '&y=' + 2 + '&id=' + id;
+                        $("#A2").text("2");
+                        jugador = 1;
+                    } else {
+                        alert("Vuelva a intentar en otra casilla");
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "/game/?id=" + id,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            var names = response.winner;
+                            if (names == 1 || names == 2) {
+                                alert("names" + names);
+                            }
+                        },
+                        failure: function (response) {
+                            alert("error");
+                        }
+                    });
+                    var saveme = $.ajax({
+                        type: "POST",
+                        url: "/movement/",
+                        data: dataString,
+                        dataType: "html",
+                        asycn: false,
+                        success: function () {
+                            alert("Ha sido ejecutada la acción.");
+                        }
+                    }).responseText;
+                    console.log(saveme);
+                });
+            });
+
+            $(document).ready(function () {
+                $("#B0").click(function () {
+
+                    if (jugador == 1 && $("#B0").text() == "0") {
+                        var dataString = 'token=' + 1 + '&x=' + 1 + '&y=' + 0 + '&id=' + id;
+                        $("#B0").text("1");
+                        jugador = 2;
+                    } else if (jugador == 2 && $("#B0").text() == "0") {
+                        var dataString = 'token=' + 2 + '&x=' + 1 + '&y=' + 0 + '&id=' + id;
+                        $("#B0").text("2");
+                        jugador = 1;
+                    } else {
+                        alert("Vuelva a intentar en otra casilla");
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "/game/?id=" + id,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            var names = response.winner;
+                            if (names == 1 || names == 2) {
+                                alert("names" + names);
+                            }
+                        },
+                        failure: function (response) {
+                            alert("error");
+                        }
+                    });
+                    var saveme = $.ajax({
+                        type: "POST",
+                        url: "/movement/",
+                        data: dataString,
+                        dataType: "html",
+                        asycn: false,
+                        success: function () {
+                            alert("Ha sido ejecutada la acción.");
+                        }
+                    }).responseText;
+                    console.log(saveme);
+                });
+            });
+
+            $(document).ready(function () {
+                $("#B1").click(function () {
+
+                    if (jugador == 1 && $("#B1").text() == "0") {
+                        var dataString = 'token=' + 1 + '&x=' + 1 + '&y=' + 1 + '&id=' + id;
+                        $("#B1").text("1");
+                        jugador = 2;
+                    } else if (jugador == 2 && $("#B1").text() == "0") {
+                        var dataString = 'token=' + 2 + '&x=' + 1 + '&y=' + 1 + '&id=' + id;
+                        $("#B1").text("2");
+                        jugador = 1;
+                    } else {
+                        alert("Vuelva a intentar en otra casilla");
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "/game/?id=" + id,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            var names = response.winner;
+                            if (names == 1 || names == 2) {
+                                alert("names" + names);
+                            }
+                        },
+                        failure: function (response) {
+                            alert("error");
+                        }
+                    });
+                    var saveme = $.ajax({
+                        type: "POST",
+                        url: "/movement/",
+                        data: dataString,
+                        dataType: "html",
+                        asycn: false,
+                        success: function () {
+                            alert("Ha sido ejecutada la acción.");
+                        }
+                    }).responseText;
+                    console.log(saveme);
+                });
+            });
+
+            $(document).ready(function () {
+                $("#B2").click(function () {
+                    /* var ot_antigua = $("#ot_editar").val();
+                     var ot_nueva = $("#nueva_ot").val();
+                     var cuenta = $("#cuenta").val();
+                     alert(ot_antigua + "-" + ot_nueva + "-" + cuenta);*/
+                    if (jugador == 1 && $("#B2").text() == "0") {
+                        var dataString = 'token=' + 1 + '&x=' + 1 + '&y=' + 2 + '&id=' + id;
+                        $("#B2").text("1");
+                        jugador = 2;
+                    } else if (jugador == 2 && $("#B2").text() == "0") {
+                        var dataString = 'token=' + 2 + '&x=' + 1 + '&y=' + 2 + '&id=' + id;
+                        $("#B2").text("2");
+                        jugador = 1;
+                    } else {
+                        alert("Vuelva a intentar en otra casilla");
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "/game/?id=" + id,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            var names = response.winner;
+                            if (names == 1 || names == 2) {
+                                alert("names" + names);
+                            }
+                        },
+                        failure: function (response) {
+                            alert("error");
+                        }
+                    });
+                    var saveme = $.ajax({
+                        type: "POST",
+                        url: "/movement/",
+                        data: dataString,
+                        dataType: "html",
+                        asycn: false,
+                        success: function () {
+                            alert("Ha sido ejecutada la acción.");
+                        }
+                    }).responseText;
+                    console.log(saveme);
+                });
+            });
+
+            $(document).ready(function () {
+                $("#C0").click(function () {
+
+                    if (jugador == 1 && $("#C0").text() == "0") {
+                        var dataString = 'token=' + 1 + '&x=' + 2 + '&y=' + 0 + '&id=' + id;
+                        $("#C0").text("1");
+                        jugador = 2;
+                    } else if (jugador == 2 && $("#C0").text() == "0") {
+                        var dataString = 'token=' + 2 + '&x=' + 2 + '&y=' + 0 + '&id=' + id;
+                        $("#C0").text("2");
+                        jugador = 1;
+                    } else {
+                        alert("Vuelva a intentar en otra casilla");
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "/game/?id=" + id,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            var names = response.winner;
+                            if (names == 1 || names == 2) {
+                                alert("names" + names);
+                            }
+                        },
+                        failure: function (response) {
+                            alert("error");
+                        }
+                    });
+                    var saveme = $.ajax({
+                        type: "POST",
+                        url: "/movement/",
+                        data: dataString,
+                        dataType: "html",
+                        asycn: false,
+                        success: function () {
+                            alert("Ha sido ejecutada la acción.");
+                        }
+                    }).responseText;
+                    console.log(saveme);
+                });
+            });
+            
+            
+             $(document).ready(function () {
+                $("#C1").click(function () {
+                    if (jugador == 1 && $("#C1").text() == "0") {
+                        var dataString = 'token=' + 1 + '&x=' + 2 + '&y=' + 1 + '&id=' + id;
+                        $("#C1").text("1");
+                        jugador = 2;
+                    } else if (jugador == 2 && $("#C1").text() == "0") {
+                        var dataString = 'token=' + 2 + '&x=' + 2 + '&y=' + 1 + '&id=' + id;
+                        $("#C1").text("2");
+                        jugador = 1;
+                    } else {
+                        alert("Vuelva a intentar en otra casilla");
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "/game/?id=" + id,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            var names = response.winner;
+                            if (names == 1 || names == 2) {
+                                alert("names" + names);
+                            }
+                        },
+                        failure: function (response) {
+                            alert("error");
+                        }
+                    });
+                    var saveme = $.ajax({
+                        type: "POST",
+                        url: "/movement/",
+                        data: dataString,
+                        dataType: "html",
+                        asycn: false,
+                        success: function () {
+                            alert("Ha sido ejecutada la acción.");
+                        }
+                    }).responseText;
+                    console.log(saveme);
+                });
+            });
+            
+            
+             $(document).ready(function () {
+                $("#C2").click(function () {
+                    if (jugador == 1 && $("#C2").text() == "0") {
+                        var dataString = 'token=' + 1 + '&x=' + 2 + '&y=' + 2 + '&id=' + id;
+                        $("#C2").text("1");
+                        jugador = 2;
+                    } else if (jugador == 2 && $("#C2").text() == "0") {
+                        var dataString = 'token=' + 2 + '&x=' + 2 + '&y=' + 2 + '&id=' + id;
+                        $("#C2").text("2");
+                        jugador = 1;
+                    } else {
+                        alert("Vuelva a intentar en otra casilla");
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "/game/?id=" + id,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            var names = response.winner;
+                            if (names == 1 || names == 2) {
+                                alert("names" + names);
+                            }
+                        },
+                        failure: function (response) {
+                            alert("error");
+                        }
+                    });
+                    var saveme = $.ajax({
+                        type: "POST",
+                        url: "/movement/",
+                        data: dataString,
+                        dataType: "html",
+                        asycn: false,
+                        success: function () {
+                            alert("Ha sido ejecutada la acción.");
+                        }
+                    }).responseText;
+                    console.log(saveme);
+                });
+            });
+            
+            
+            
+           
+    <SCRIPT>
+            
+    </body>
+</html>
